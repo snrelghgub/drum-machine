@@ -1,6 +1,8 @@
 import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
+import DrumPad from './components/DrumPad.js';
+import Display from './components/Display.js';
 
 class App extends React.Component {
 	constructor(props){
@@ -9,8 +11,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id="drum-machine">drum machine
-        <div id="display">display</div>
+      <div id="drum-machine">eDrumZ
+        <Display/>
+        <DrumPad/>
       </div>
     );
   }

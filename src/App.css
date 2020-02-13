@@ -1,3 +1,13 @@
+
+#drum-machine{
+  background-color: red; 
+}
+
+#display{
+  background-color: blue; 
+}
+
+/*
 .App {
   text-align: center;
 }
@@ -36,3 +46,4 @@
     transform: rotate(360deg);
   }
 }
+*/

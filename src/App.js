@@ -4,6 +4,13 @@ import './App.css';
 import DrumPad from './components/DrumPad.js';
 import Display from './components/Display.js';
 
+import { Card } from 'antd';
+
+import { Layout } from 'antd';
+
+const { Header, Footer, Sider, Content } = Layout;
+
+
 
 const drumkit = [
   {id:"Q", soundType:"Bass Drum", src:"http://www.burnkit2600.com/temp/HR-16/HR-16-WAVs/03-22power%20kick.wav"},
@@ -35,12 +42,19 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id="drum-machine">eDrumZ
-        <Display state={this.state.display}/>
+      <Layout style={{ padding: '100px' }}>
+        <Header>eDrumZ</Header>
+        <Content>
+      <div id="drum-machine">
+        <Card title={this.state.display}><Display state={this.state.display}/>
         {drumkit.map( (x) => 
             <DrumPad id={x.id} soundType={x.soundType} src={x.src} handleDisplay={this.handleDisplay}/>
         )}
+        </Card>
       </div>
+      </Content>
+      <Footer style={{ textAlign: 'center' }}>coded by Taizy</Footer>
+      </Layout>
     );
   }
 }

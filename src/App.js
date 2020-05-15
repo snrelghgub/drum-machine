@@ -18,16 +18,27 @@ const drumkit = [
 ]
 
 class App extends React.Component {
-//	constructor(props){
-	//	super(props)
-  //}
+	constructor(props){
+    super(props)
+    
+    this.state = {
+      display: "press a Key or Click", 
+    }
+  }
+
+  handleDisplay = (soundType) => {
+    console.log(soundType); 
+    this.setState ({ 
+      display: soundType, 
+    }) 
+  }
 
   render() {
     return (
       <div id="drum-machine">eDrumZ
-        <Display/>
+        <Display state={this.state.display}/>
         {drumkit.map( (x) => 
-            <DrumPad id={x.id} soundType={x.soundType} src={x.src} />
+            <DrumPad id={x.id} soundType={x.soundType} src={x.src} handleDisplay={this.handleDisplay}/>
         )}
       </div>
     );

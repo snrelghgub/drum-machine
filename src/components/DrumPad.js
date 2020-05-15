@@ -28,8 +28,10 @@ class DrumPad extends React.Component {
   handleKeyDown = e => {
     //console.log("key press success"); 
     if(e.keyCode===this.props.id.charCodeAt(0)){
-      console.log("entered");
-      console.log(this.props.id.charCodeAt(0)); 
+      //console.log("entered");
+      //console.log(this.props.id.charCodeAt(0)); 
+      this.audio.current.play(); 
+      this.audio.current.currentTime=0; 
     }
   }
 

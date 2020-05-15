@@ -12,9 +12,28 @@ class DrumPad extends React.Component {
   }
 
   playSound = () => {
-    console.log(this.audio.current); 
-    this.audio.current.play(); 
+    //console.log(this.audio.current); 
+    this.audio.current.play(); //play current sound
     this.audio.current.currentTime=0; //allows intermittent playing
+  }
+
+  componentDidMount(){ 
+    document.addEventListener('keydown', this.handleKeyDown ); //"keydown' eventListener on page to run script
+    //window.focus()//Assures that the drumkit window gets focus
+  }
+
+  componentWillUnmount(){
+    document.removeEventListener('keydown', this.handleKeyDown );
+  }
+
+  handleKeyDown = e => {
+    //console.log("key press success"); 
+    if(e.keyCode===this.props.id.charCodeAt(0)){
+      //console.log("entered");
+      //console.log(this.props.id.charCodeAt(0)); 
+      this.audio.current.play(); 
+      this.audio.current.currentTime=0; 
+    }
   }
 
   render() {

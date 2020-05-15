@@ -18,11 +18,12 @@ class DrumPad extends React.Component {
   }
 
   componentDidMount(){ 
-    document.addEventListener('keydown', this.handleKeyDown ); //"keydown' eventListener to run script
+    document.addEventListener('keydown', this.handleKeyDown ); //"keydown' eventListener on page to run script
+    //window.focus()//Assures that the drumkit window gets focus
   }
 
   componentWillUnmount(){
-    //console.log("test"); 
+    document.removeEventListener('keydown', this.handleKeyDown );
   }
 
   handleKeyDown = e => {

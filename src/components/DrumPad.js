@@ -1,6 +1,6 @@
 import React from 'react';
-//import DrumButton from './components/DrumButton.js'; 
-//component for Drum Machine's drumpad 
+import 'antd/dist/antd.css';
+import { Button } from 'antd';
 
 
 
@@ -35,9 +35,9 @@ class DrumPad extends React.Component {
 
   render() {
     return (
-      <button id={this.props.id} className="drum-pad" onClick={this.playSound}>{this.props.id}
+      <Button style={{width:"100px", margin:"5px", marginLeft:"10px"}} type="primary" id={this.props.id} className="drum-pad" onClick={this.playSound}>{this.props.id}
         <audio ref={this.audio} id={this.props.id} src={this.props.src} className="clip"></audio>
-      </button>    
+      </Button>    
     );
   }
 }

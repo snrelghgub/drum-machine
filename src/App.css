@@ -1,20 +1,23 @@
 
 #drum-machine{
-  background-color: red; 
+  margin: auto; 
 }
 
 #display{
-  background-color: blue; 
+  text-align: right;
 }
 
 .drum-pad{
   background-color: green; 
 }
 
+
 /*
 .App {
   text-align: center;
 }
+
+/*
 
 .App-logo {
   height: 40vmin;

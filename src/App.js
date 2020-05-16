@@ -4,11 +4,19 @@ import './App.css';
 import DrumPad from './components/DrumPad.js';
 import Display from './components/Display.js';
 
+import {
+  LoadingOutlined,
+} from '@ant-design/icons';
+
+import { Typography } from 'antd';
+
 import { Card } from 'antd';
 
 import { Layout } from 'antd';
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Footer, Content } = Layout;
+
+const { Title } = Typography;
 
 
 
@@ -29,7 +37,7 @@ class App extends React.Component {
     super(props)
     
     this.state = {
-      display: "press a Key or Click", 
+      display: "press a Key or Click to play drums", 
     }
   }
 
@@ -42,18 +50,21 @@ class App extends React.Component {
 
   render() {
     return (
-      <Layout style={{ padding: '100px' }}>
-        <Header>eDrumZ</Header>
-        <Content>
-      <div id="drum-machine">
-        <Card title={this.state.display}><Display state={this.state.display}/>
-        {drumkit.map( (x) => 
-            <DrumPad id={x.id} soundType={x.soundType} src={x.src} handleDisplay={this.handleDisplay}/>
-        )}
-        </Card>
-      </div>
+      <Layout style={{ padding: '200px', backgroundColor: 'white'}}>
+        <Title style={{textAlign: 'center'}}>e<LoadingOutlined />Drumz</Title>
+        <Content >
+          <Layout style={{backgroundColor: 'white'}}>
+          <div id="drum-machine">
+            <Card style={{ width: '400px'}}>
+              <Display id="display" state={this.state.display} />
+              {drumkit.map((x) =>
+                <DrumPad id={x.id} soundType={x.soundType} src={x.src} handleDisplay={this.handleDisplay} />
+              )}
+            </Card>
+          </div>
+          </Layout>
       </Content>
-      <Footer style={{ textAlign: 'center' }}>coded by Taizy</Footer>
+      <Footer style={{ textAlign: 'center', backgroundColor: 'white'}}>coded by <a target="blank" href="http://github.com/snrelghgub" id="github-link">Taizy</a></Footer>
       </Layout>
     );
   }

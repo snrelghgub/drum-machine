@@ -6,15 +6,15 @@ import Display from './components/Display.js';
 
 
 const drumkit = [
-  {id:"Q", soundType:"Bass Drum", src:"http://www.burnkit2600.com/temp/HR-16/HR-16-WAVs/03-22power%20kick.wav"},
-  {id:"W", soundType:"Floor Tom", src:"http://www.denhaku.com/r_box/drumu/lotom.wav"},
-  {id:"E", soundType:"Snare Drum", src:"http://bigsamples.free.fr/d_kit/snare/606snare.wav"},
-  {id:"A", soundType:"Hanging/Rack Tom", src:"http://www.denhaku.com/r_box/tr707/hitom.wav"},
-  {id:"S", soundType:"Hi-hat", src:"http://www.burnkit2600.com/temp/HR-16/HR-16-WAVs/26-half%20open%20hi%20hat.wav"},
-  {id:"D", soundType:"Crash Cymbal", src:"http://electrongate.com/dmxfiles/CRASH.wav"},
-  {id:"Z", soundType:"Ride Cymbal", src:"http://electrongate.com/dmxfiles/PERIDE.wav"},
-  {id:"X", soundType:"Splash Cymbal", src:"https://trxcymbals.com/wp-content/uploads/2015/05/10-inch-Splash-NRG.mp3"},
-  {id:"C", soundType:"China Cymbal", src:"http://www.drumsoundz.com/Crash-03.wav"}
+  {id:"Q", soundType:"Heater-1", src:"https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"},
+  {id:"W", soundType:"Heater-2", src:"https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"},
+  {id:"E", soundType:"Heater-3", src:"https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3"},
+  {id:"A", soundType:"Heater-4", src:"https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3"},
+  {id:"S", soundType:"Clap", src:"https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3"},
+  {id:"D", soundType:"Open-HH", src:"https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"},
+  {id:"Z", soundType:"Kick-n'-Hat", src:"https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"},
+  {id:"X", soundType:"Kick", src:"https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"},
+  {id:"C", soundType:"Closed-HH", src:"https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"}
 ]
 
 class App extends React.Component {

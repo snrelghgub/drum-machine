@@ -1,6 +1,4 @@
 import React from 'react';
-//import DrumButton from './components/DrumButton.js'; 
-//component for Drum Machine's drumpad 
 import 'antd/dist/antd.css';
 import { Button } from 'antd';
 

@@ -3,19 +3,15 @@ import React from 'react';
 import './App.css';
 import DrumPad from './components/DrumPad.js';
 import Display from './components/Display.js';
-
 import {
   LoadingOutlined,
 } from '@ant-design/icons';
 
 import { Typography } from 'antd';
-
 import { Card } from 'antd';
-
 import { Layout } from 'antd';
 
 const { Footer, Content } = Layout;
-
 const { Title } = Typography;
 
 

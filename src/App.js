@@ -11,7 +11,7 @@ import { Typography } from 'antd';
 import { Card } from 'antd';
 import { Layout } from 'antd';
 
-const { Footer, Content } = Layout;
+const { Footer, Header, Content } = Layout;
 const { Title } = Typography;
 
 
@@ -46,21 +46,23 @@ class App extends React.Component {
 
   render() {
     return (
-      <Layout style={{ padding: '200px', backgroundColor: 'white'}}>
-        <Title style={{textAlign: 'center'}}>e<LoadingOutlined />Drumz</Title>
-        <Content >
-          <Layout style={{backgroundColor: 'white'}}>
+      <Layout style={{backgroundColor: 'white', height: '100vh'}}>
+        <Content id="wrapper" style={{ backgroundColor: 'blue'}}>
+          <Layout>
+          <Header style={{backgroundColor: 'white'}}>
+         <Title style={{textAlign: 'center'}}><div id="machine-name">e<LoadingOutlined/>Drumz</div></Title>
+         </Header>
           <div id="drum-machine">
-            <Card style={{ width: '400px'}}>
+            <Card style={{ width: '400px', margin: 'auto'}}>
               <Display id="display" state={this.state.display} />
               {drumkit.map((x) =>
                 <DrumPad id={x.id} soundType={x.soundType} src={x.src} handleDisplay={this.handleDisplay} />
               )}
             </Card>
           </div>
+          <Footer style={{ textAlign: 'center', backgroundColor: 'white'}}>developed by <a target="blank" href="http://github.com/snrelghgub" id="github-link">Taizy</a></Footer>
           </Layout>
       </Content>
-      <Footer style={{ textAlign: 'center', backgroundColor: 'white'}}>coded by <a target="blank" href="http://github.com/snrelghgub" id="github-link">Taizy</a></Footer>
       </Layout>
     );
   }

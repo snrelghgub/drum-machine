@@ -2,12 +2,46 @@
   text-align: right;
 }
 
-#wrapper{
+#drumpads-container{
+  background: red;
+  font-size: 40px;
+  padding-left: 40px; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  row-gap: 15px;
+ /*
+ justify-items: center;  
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 50px 50px 50px; 
+  column-gap: 30px;
+  row-gap: 15px;*/
+}
+
+#wrapper{ 
+  max-width: 700px; 
+  margin: auto; 
+  /*
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  */
 }
+
+
+
+/*
+@media only screen and (max-device-width: 480px) {
+  #wrapper{
+    width: 500px; 
+  }
+}*/
+
+
 

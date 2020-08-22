@@ -2,9 +2,6 @@ import React from 'react';
 import './App.css';
 import DrumPad from './components/DrumPad.js';
 import Display from './components/Display.js';
-import {
-  LoadingOutlined,
-} from '@ant-design/icons';
 
 import { Typography } from 'antd';
 import { Card } from 'antd';
@@ -45,23 +42,19 @@ class App extends React.Component {
 
   render() {
     return (
-      <Layout style={{ backgroundColor: 'white', height: '100vh' }}>
-        <Content id="wrapper" style={{ backgroundColor: 'blue' }}>
-          <Layout>
-            <Header style={{ backgroundColor: 'white' }}>
-              <Title style={{ textAlign: 'center' }}><div id="machine-name">e<LoadingOutlined />Drumz</div></Title>
-            </Header>
-            <div id="drum-machine">
-              <Card style={{ width: '400px', margin: 'auto' }}>
-                <Display id="display" state={this.state.display} />
-                {drumkit.map((x) =>
-                  <DrumPad id={x.id} soundType={x.soundType} src={x.src} handleDisplay={this.handleDisplay} />
-                )}
-              </Card>
+      <Layout id="wrapper">
+        <Header style={{ backgroundColor: 'white'}}><Title style={{ textAlign: 'center'}}>eoDrumz</Title></Header>
+        <Content id="drum-machine">
+          <Card >
+            <Display id="display" state={this.state.display} />
+            <div id="drumpads-container">
+            {drumkit.map((x) =>
+              <DrumPad id={x.id} soundType={x.soundType} src={x.src} handleDisplay={this.handleDisplay} />
+            )}
             </div>
-            <Footer style={{ textAlign: 'center', backgroundColor: 'white' }}>developed by <a target="blank" href="http://github.com/snrelghgub" id="github-link">Taizy</a></Footer>
-          </Layout>
+          </Card>
         </Content>
+        <Footer style={{ textAlign: 'center'}}>developed by <a target="blank" href="http://github.com/snrelghgub" id="github-link">Taizy</a></Footer>
       </Layout>
     );
   }

@@ -10,8 +10,6 @@ import { Layout } from 'antd';
 const { Footer, Header, Content } = Layout;
 const { Title } = Typography;
 
-
-
 const drumkit = [
   { id: "Q", soundType: "Heater-1", src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" },
   { id: "W", soundType: "Heater-2", src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" },
@@ -43,18 +41,18 @@ class App extends React.Component {
   render() {
     return (
       <Layout id="wrapper">
-        <Header style={{ backgroundColor: 'white'}}><Title style={{ textAlign: 'center'}}>eoDrumz</Title></Header>
-        <Content id="drum-machine">
-          <Card >
+        <Header style={{ backgroundColor: 'white' }}><Title className="title" style={{ textAlign: 'center' }}>eoDrumz</Title></Header>
+        <Content id="drum-machine" style={{ backgroundColor: 'white' }}>
+          <Card>
             <Display id="display" state={this.state.display} />
             <div id="drumpads-container">
-            {drumkit.map((x) =>
-              <DrumPad id={x.id} soundType={x.soundType} src={x.src} handleDisplay={this.handleDisplay} />
-            )}
+              {drumkit.map((x) =>
+                <DrumPad id={x.id} soundType={x.soundType} src={x.src} handleDisplay={this.handleDisplay} />
+              )}
             </div>
           </Card>
         </Content>
-        <Footer style={{ textAlign: 'center'}}>developed by <a target="blank" href="http://github.com/snrelghgub" id="github-link">Taizy</a></Footer>
+        <Footer style={{ textAlign: 'center', backgroundColor: 'white' }}>developed by <a target="blank" href="http://github.com/snrelghgub" id="github-link">Taizy</a></Footer>
       </Layout>
     );
   }

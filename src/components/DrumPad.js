@@ -1,7 +1,5 @@
 import React from 'react';
-import 'antd/dist/antd.css';
-import { Button } from 'antd';
-
+import Button from 'react-bootstrap/Button';
 
 
 class DrumPad extends React.Component {
@@ -36,7 +34,7 @@ class DrumPad extends React.Component {
 
   render() {
     return (
-      <Button style={{width:"100px", margin:"5px", marginLeft:"10px"}} type="primary" id={this.props.id} className="drum-pad" onClick={this.playSound}>{this.props.id}
+      <Button variant="primary" id={this.props.id} className="drum-pad" onClick={this.playSound} block>{this.props.id}
         <audio ref={this.audio} id={this.props.id} src={this.props.src} className="clip"></audio>
       </Button>    
     );

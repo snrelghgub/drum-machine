@@ -1,7 +1,11 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import DrumPad from './components/DrumPad.js';
 import Display from './components/Display.js';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
 
 const drumkit = [
   { id: "Q", soundType: "Heater-1", src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" },
@@ -33,8 +37,7 @@ class App extends React.Component {
 
   render() {
     return (
-      
-      <div id="drum-machine">
+    <Container id="drum-machine" className="App-header" fluid>
         <h1>eoDrumz</h1>
             <Display id="display" state={this.state.display} />
             <div id="drumpads-container">
@@ -43,7 +46,7 @@ class App extends React.Component {
               )}
             </div>
         <footer>developed by <a target="blank" href="http://github.com/snrelghgub" id="github-link">Taizy</a></footer> 
-     </div>
+     </Container>
     );
   }
 }

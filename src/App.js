@@ -37,18 +37,18 @@ class App extends React.Component {
 
   render() {
     return (
-    <Container id="drum-machine">
-      
-           <header>eoDrumz</header>
-            <Display id="display" state={this.state.display} />
-            <div id="drumpads-container">
-              {drumkit.map((x) =>
-                <DrumPad id={x.id} soundType={x.soundType} src={x.src} handleDisplay={this.handleDisplay} />
-              )}
-            </div>
-            <footer>developed by <a target="blank" href="http://github.com/snrelghgub" id="github-link">Taizy</a></footer> 
-   
-     </Container>
+      <Container id="drum-machine">
+        <header>eoDrumz</header>
+        <div i="dd-wrapper">
+          <Display id="display" state={this.state.display} />
+          <div id="drumpads-container">
+            {drumkit.map((x) =>
+              <DrumPad id={x.id} soundType={x.soundType} src={x.src} handleDisplay={this.handleDisplay} />
+            )}
+          </div>
+        </div>
+        <footer>developed by <a target="blank" href="http://github.com/snrelghgub" id="github-link">Taizy</a></footer>
+      </Container>
     );
   }
 }

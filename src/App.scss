@@ -1,6 +1,4 @@
-
 #drum-machine{
-  background-color:red; 
   min-height: 90vh;
   min-width: 90vw;
   display: flex;
@@ -8,128 +6,54 @@
   align-items: center;
   justify-content: center;
   font-size: calc(40px + 2vmin);
-  color: white;
-  header{
-    background: blue;
-  }
   p#display{
-    background: yellow; 
+    background: gainsboro; 
+    padding: 0px 20px 0px 20px; 
     text-align: right; 
+    font-size: 60%;
+    border-radius: 5px;
   } 
   #drumpads-container{
-    background: violet; 
     width: 400px; 
     height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   
-    //font-size: 60px;
     display: grid;
     grid-template-columns: auto auto auto;
-    //grid-template-columns: 1fr 1fr 1fr;
-    //grid-template-rows: 1fr 1fr 1fr;
     justify-items: center;
     column-gap: 20px; 
-    //row-gap: 15px;
 
     .drum-pad{
-      background-color: orange; 
       margin: 10px; 
       font-size: calc(10px + 2vmin);
-      //height: 46px; 
-      //width: 38px; 
     }
   }
   footer{
-    background: lightgreen;
+    font-size: 35%;
   }
 }
 
 @media only screen and (max-device-width: 480px) {
   #drum-machine{
-  //  header{
-   // }
+    header{
+      font-size: 140%; 
+    }
     p#display{
+      font-size: 90%; 
     } 
     #drumpads-container{
-      background: violet;
-      width: 500px; 
-      height: 400px;
+      width: 550px; 
+      height: 450px;
       .drum-pad{
-        background-color: orange; 
         margin: 10px; 
         font-size: calc(20px + 2vmin);
-        //height: 46px; 
-        //width: 38px; 
       }
     }
-    footer{
-    }
   }
  
 }
 
-
-
-
-
-/*
-.App {
-  text-align: center;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-*/
-
-
-/*
-
-#display{
-  text-align: right;
-}
-
-#drumpads-container{
-  font-size: 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  justify-items: center;
-  row-gap: 15px;
-}
-
-#wrapper{ 
-  max-width: 600px;
-}
-
-@media only screen and (max-device-width: 480px) {
-  #wrapper{
-    height: 600px; 
-    width: 600px; 
-  }
-  #header{
-    font-size-adjust: 1.5;
-  }
-  #main{
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    height: 800px; 
-    width: 800px; 
-  }
-
-#card{
-  width: 500px;
-  height: 400px;
-}
- 
-}
-*/
 
 

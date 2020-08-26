@@ -1,4 +1,7 @@
-#display{
+
+
+
+/*#display{
   text-align: right;
 }
 
@@ -13,19 +16,30 @@
 
 #wrapper{ 
   max-width: 600px;
-  margin: auto; 
 }
 
 @media only screen and (max-device-width: 480px) {
   #wrapper{
     height: 600px; 
+    width: 600px; 
   }
-  #drum-machine{
+  #header{
+    font-size-adjust: 1.5;
+  }
+  #main{
     display: flex; 
     align-items: center;
     justify-content: center;
+    height: 800px; 
+    width: 800px; 
   }
-}
 
+#card{
+  width: 500px;
+  height: 400px;
+}
+ 
+}
+*/
 
 
